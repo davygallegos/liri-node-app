@@ -58,16 +58,13 @@ function searchBandsInTown() {
     
         axios.get(queryUrl).then(
             function (response) {
-                    console.log("testing bands in town " + response.data[0].venue.name);
-                    console.log
-    
+                    console.log("Name of Venue: " + response.data[0].venue.name);
+                    console.log("Venue location: " + response.data[0].venue.city);
+
+   
             }
         );
     }
-    
-    
-
-
 
 //OMDB function
 function movie() {
