@@ -51,9 +51,21 @@ function song() {
 
 //Band in Town query
 function searchBandsInTown() {
-
+        var queryUrl = "https://rest.bandsintown.com/artists/" + userSearch + "/events?app_id=codingbootcamp";
     
-}
+        // This line is just to help us debug against the actual URL.
+        // console.log(queryUrl);
+    
+        axios.get(queryUrl).then(
+            function (response) {
+                    console.log(response.data)
+    
+            }
+        );
+    }
+    
+    
+
 
 
 //OMDB function
