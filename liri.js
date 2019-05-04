@@ -16,17 +16,17 @@ var userSearch = process.argv.slice(3).join(" ");
 switch (queryPhrase) {
     case "spotify-this-song":
         song()
-        console.log("spotify response")
+        // console.log("spotify response")
         break;
 
     case "concert-this":
         searchBandsInTown()
-        console.log("band  in town locator")
+        // console.log("band  in town locator")
         break;
 
     case "movie-this":
         movie()
-        console.log("OMDB response")
+        // console.log("OMDB response")
         break;
 
     case "do-what-its-says":
@@ -44,9 +44,9 @@ function song() {
         //console.log(data)
         var songData = data.tracks.items[0];
         // console.log("Data" , data.tracks.items[0])
-        console.log("artist", songData.album.artists[0].name)
-        console.log("Song Name", songData.name)
-        console.log("Album Name", songData.album.name)
+        console.log("Artist Name: ", songData.album.artists[0].name)
+        console.log("Song Name: ", songData.name)
+        console.log("Album Name: ", songData.album.name)
     });
 };
 
