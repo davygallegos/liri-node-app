@@ -2,7 +2,6 @@
 
 
 
-console.log('this is locked and loaded (BOOM)')
 
 exports.spotify = {
     id: process.env.SPOTIFY_ID,
