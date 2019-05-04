@@ -58,7 +58,7 @@ function searchBandsInTown() {
     
         axios.get(queryUrl).then(
             function (response) {
-                    console.log(response.data)
+                    console.log("testing bands in town " + response.data[0].venue.name);
     
             }
         );
