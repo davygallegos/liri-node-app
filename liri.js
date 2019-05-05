@@ -11,8 +11,9 @@ var spotify = new Spotify(keys.spotify);
 
 
 var queryPhrase = process.argv[2];
-var userSearch = process.argv.slice(3).join(" ");
-
+var 
+userSearch = process.argv.slice(3).join(" ");
+function switchFunc(){
 switch (queryPhrase) {
     case "spotify-this-song":
         song()
@@ -33,7 +34,8 @@ switch (queryPhrase) {
     random()
         console.log("fs response")
 }
-
+}
+switchFunc()
 //Spotify query
 function song() {
 
@@ -108,6 +110,11 @@ fs.readFile("random.txt", "utf8", function(error, data) {
   
     // We will then re-display the content as an array for later use.
     console.log(dataArr);
+    queryPhrase = dataArr[0]
+    userSearch = dataArr[1]
+    console.log(queryPhrase)
+    console.log(userSearch)
+    switchFunc()
   
   });
 }
